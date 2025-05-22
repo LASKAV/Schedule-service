@@ -1,0 +1,20 @@
+services:
+  service:
+    build:
+      context: .
+    container_name: multynexus-scheduler
+    command:
+      [
+        "python",
+        "main.py"
+      ]
+    restart: unless-stopped
+    environment:
+      - API_BASE_URL=http://backend:8000
+    networks:
+      - multynexus_backend_local
+
+
+networks:
+  multynexus_backend_local:
+    external: true

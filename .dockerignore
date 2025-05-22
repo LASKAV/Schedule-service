@@ -1,0 +1,10 @@
+/__pycache__/
+venv/
+.venv/
+.env
+/static
+.git/
+.gitingore
+.idea/
+.vscode/
+docker-compose.yml
